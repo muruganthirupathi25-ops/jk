@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Website</title>
+ <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #fef8f5;
+  color: #0e223a;
+}
+
+/* NAVBAR */
+nav {
+  width: 90%;
+  margin: auto;
+  padding: 25px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  font-size: 35px;
+  background: linear-gradient(45deg, red, #f88);
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.menu a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #0e223a;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  color: #f05b52;
+}
+
+.hire-btn {
+  background: #f05b52;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* HERO SECTION */
+.hero {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 0;
+}
+
+.left {
+  max-width: 550px;
+}
+
+.left h1 {
+  font-size: 48px;
+  line-height: 1.2;
+}
+
+.left h1 span {
+  display: block;
+  font-size: 55px;
+  font-weight: bold;
+}
+
+.left p {
+  margin: 20px 0;
+  line-height: 1.5;
+}
+
+.social a {
+  font-size: 20px;
+  margin-bottom: 20px;
+  display: block;
+  color: #0e223a;
+}
+
+.learn-btn {
+  background: #f05b52;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.right img {
+  width: 350px;
+  object-fit: cover;
+  height: 100%;
+  
+}
+
+ </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav>
+      <div class="logo">●</div>
+      <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <a href="#" class="hire-btn">Hire Me</a>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="left">
+      <div class="social">
+        <a href="/icons8-linkedin-50.png"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-dribbble"></i></a>
+        <a href="#"><i class="fab fa-behance"></i></a>
+      </div>
+
+      <h1>I'm Web Developer<br><span>Natalie E. Watson</span></h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Ut elit tellus luctusnec ullamcorper mattis, pulvinar dapibus leo.
+      </p>
+
+      <a href="#" class="learn-btn">Learn more</a>
+    </div>
+
+    <div class="right">
+      <img src="/thirupathi.jpg" alt="Developer">
+    </div>
+  </section>
+
+<script>
+    console.log("Portfolio section loaded successfully");
+
+</script>
+</body>
+</html>

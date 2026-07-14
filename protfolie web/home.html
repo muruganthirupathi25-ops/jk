@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Hero Section</title>
+
+<style>
+    body {
+        margin: 0;
+        background: radial-gradient(circle at top, #3a0000, #000000);
+        font-family: "Poppins", sans-serif;
+        color: #fff;
+    }
+
+    /* NAVBAR */
+    nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 10%;
+        align-items: center;
+        background: transparent;
+        font-size: 18px;
+    }
+
+    .logo {
+        font-size: 24px;
+        font-weight: 700;
+    }
+    .logo span {
+        color: #ff4d4d;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 40px;
+    }
+
+    .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        position: relative;
+        font-weight: 500;
+    }
+
+    .nav-links a::after {
+        content: "";
+        width: 0;
+        height: 3px;
+        background: #ff4d4d;
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        transition: 0.3s;
+    }
+
+    .nav-links a:hover::after,
+    .nav-links .active::after {
+        width: 100%;
+    }
+
+    /* HERO SECTION */
+    .hero {
+        display: flex;
+        padding: 100px 10%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .left {
+        width: 45%;
+    }
+
+    .left h3 {
+        font-size: 22px;
+        opacity: 0.8;
+    }
+
+    .type-text {
+        display: inline-block;
+        border-right: 3px solid #ff4d4d;
+        font-size: 50px;
+        font-weight: 700;
+        margin: 10px 0;
+        padding-right: 5px;
+        animation: blink 0.7s infinite;
+    }
+
+    @keyframes blink {
+        50% { border-color: transparent; }
+    }
+
+    .desc {
+        font-size: 18px;
+        opacity: 0.8;
+    }
+
+    .btn {
+        margin-top: 20px;
+        padding: 15px 30px;
+        border: 2px solid #ff4d4d;
+        color: #ff4d4d;
+        background: transparent;
+        font-size: 18px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .btn:hover {
+        background: #ff4d4d;
+        color: #000;
+    }
+
+    /* SOCIAL ICONS */
+    .socials {
+        margin-top: 30px;
+        font-size: 30px;
+        display: flex;
+        gap: 20px;
+    }
+
+    .socials i {
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .socials i:hover {
+        color: #ff4d4d;
+        transform: scale(1.2);
+    }
+
+    /* RIGHT PROFILE */
+  .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-img {
+    width: 300px;
+    height: 450px;
+
+    /* Oval shape */
+    border-radius: 50% / 60%;
+
+    /* Border */
+    border: 6px solid red;
+
+    /* Glow effect */
+    box-shadow: 0 0 25px red, 0 0 50px darkred;
+
+    object-fit: cover;
+}
+    /* FLOATING ICONS */
+    .float-icon {
+        width: 55px;
+        position: absolute;
+        animation: float 4s infinite ease-in-out alternate;
+    }
+
+    @keyframes float {
+        0%   { transform: translateY(0); }
+        100% { transform: translateY(-30px); }
+    }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <div class="logo"><span>protfolie-person</span></div>
+
+    <div class="nav-links">
+        <a href="./home.html" class="active">Home</a>
+        <a href="./about.html">About</a>
+        <a href="#">Projects</a>
+        <a href="./contact.html">Contact</a>
+    </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero">
+
+    <!-- LEFT SIDE -->
+    <div class="left">
+        <h3>Hello, I'm Thirupathi👋</h3>
+
+        <div class="type-text" id="typing"></div>
+
+        <p class="desc">
+            
+        </p>
+
+        <button class="btn">DOWNLOAD CV</button>
+
+        <div class="socials">
+            <i>💼</i>
+            <i>📷</i>
+            <i>🟢</i>
+            <i>🐙</i>
+        </div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="right">
+        <img src="/my photo.jpeg" class="profile-img">
+
+        <!-- FLOATING ICONS -->
+        <img src="https://cdn.worldvectorlogo.com/logos/javascript-1.svg" class="float-icon" style="left: -50px; top: 40px;">
+        <img src="https://cdn.worldvectorlogo.com/logos/react-2.svg" class="float-icon" style="right: -50px; top: 0;">
+        <img src="https://cdn.worldvectorlogo.com/logos/python-5.svg" class="float-icon" style="right: -40px; bottom: 30px;">
+        <img src="https://cdn.worldvectorlogo.com/logos/html-1.svg" class="float-icon" style="left: 20px; bottom: -10px;">
+        <img src="https://cdn.worldvectorlogo.com/logos/css-3.svg" class="float-icon" style="right: 80px; top: 150px;">
+    </div>
+
+</section>
+
+<!-- TYPING EFFECT SCRIPT -->
+<script>
+    const text = "java ful stack";
+    let i = 0;
+
+    function typingEffect() {
+        if (i < text.length) {
+            document.getElementById("typing").textContent += text.charAt(i);
+            i++;
+            setTimeout(typingEffect, 120);
+        }
+    }
+    typingEffect();
+</script>
+
+</body>
+</html>

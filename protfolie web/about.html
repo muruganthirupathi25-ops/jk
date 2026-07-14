@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Me Section</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            background: radial-gradient(circle at top, #3a0000, #000000);
+            color: #fff;
+        }
+         nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 10%;
+        align-items: center;
+        background: transparent;
+        font-size: 18px;
+    }
+
+    .logo {
+        font-size: 24px;
+        font-weight: 700;
+    }
+    .logo span {
+        color: #ff4d4d;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 40px;
+    }
+
+    .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        position: relative;
+        font-weight: 500;
+    }
+
+    .nav-links a::after {
+        content: "";
+        width: 0;
+        height: 3px;
+        background: #ff4d4d;
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        transition: 0.3s;
+    }
+
+    .nav-links a:hover::after,
+    .nav-links .active::after {
+        width: 100%;
+    }
+
+        .about-section {
+            padding: 70px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        /* Heading */
+        .title {
+            text-align: center;
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .title::after {
+            content: "";
+            width: 120px;
+            height: 4px;
+            background: #ff4d4d;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 10px;
+        }
+
+        /* Left Text */
+        .about-text {
+            width: 50%;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        h3 {
+            margin-top: 25px;
+            font-size: 22px;
+            color: #ff4d4d;
+        }
+
+        /* Skill Tags */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .skill {
+            padding: 8px 20px;
+            background: rgba(255, 80, 80, 0.2);
+            border: 1px solid rgba(255, 80, 80, 0.5);
+            border-radius: 40px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            background: rgba(255, 80, 80, 0.6);
+            transform: scale(1.1);
+        }
+
+        /* Right Code Box */
+        .code-box {
+            width: 45%;
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 15px;
+            padding: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            font-family: "Courier New", monospace;
+            color: #ff6666;
+            font-size: 16px;
+            white-space: pre-line;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+    <div class="logo"><span>protfolie-person</span></div>
+
+    <div class="nav-links">
+        <a href="./home.html" class="active">Home</a>
+        <a href="./about.html">About</a>
+        <a href="#">Projects</a>
+        <a href="./contact.html">Contact</a>
+    </div>
+</nav>
+
+    <h2 class="title">About Me</h2>
+
+    <section class="about-section">
+
+        <!-- LEFT SIDE -->
+        <div class="about-text">
+            <p>
+                I’m an MCA student at Chaitanya University, Hyderabad, specializing in Cloud Computing. I recently
+completed a cybersecurity internship at PyNet Labs, where I gained hands-on experience in network
+automation and security. I’m skilled in front-end technologies (HTML, CSS, JavaScript), Java, SQL, and
+database management. Passionate about cloud computing, I’m eager to apply my expertise in real-world
+technology environments.(Java Full STACK Development,Pumo Technovation Bangalore)
+            </p>
+
+            <h3>Skills & Technologies</h3>
+
+            <div class="skills">
+                <div class="skill">HTML5</div>
+                <div class="skill">CSS3</div>
+                <div class="skill">JavaScript</div>
+                <div class="skill">React</div>
+                <div class="skill">Node.js</div>
+                <div class="skill">Git</div>
+                <div class="skill">java</div>
+                <div class="skill">DSA</div>
+                <div class="skill">AWS</div>
+                   <div class="skill">SQL</div>
+            </div>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="code-box" id="codeBox">
+            const developer = {
+                name: "M Thirupathi👋",
+                role: "Java full stack development",
+                passion: "Expanding skills and discovering new ways to innovate"
+            };
+        </div>
+
+    </section>
+
+    <script>
+        // Small animation for code box
+        const code = `
+const developer = {
+    name: "M Thirupathi👋",
+    role: "Java full stack development",
+    passion: "Expanding skills and discovering new ways to innovate"
+};`;
+
+        let i = 0;
+        function typeCode() {
+            if (i < code.length) {
+                document.getElementById("codeBox").innerText = code.slice(0, i + 1);
+                i++;
+                setTimeout(typeCode, 30);
+            }
+        }
+        typeCode();
+    </script>
+
+</body>
+</html>
